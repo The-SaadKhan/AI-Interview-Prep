@@ -11,12 +11,17 @@
 
 </div>
 
+## 🌐 Live Demo
+
+🚀 Check out the deployed project here: [AI-Interview-Prep Live](https://ai-interview-prep.vercel.app)
+
+---
 ## 📋 <a name="table">Table of Contents</a>
 
 1. 🤖 [Introduction](#introduction)
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
-4. 🤸 [Quick Start]
+4. 🤸 [Quick Start](#quick-start)
 
 ## <a name="introduction">🤖 Introduction</a>
 
@@ -115,3 +120,4 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
+## ✨ Built with passion by Saad Khan
