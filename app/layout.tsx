@@ -45,7 +45,8 @@ const monaSans = Mona_Sans({
 
 export const metadata: Metadata = {
   title: "InterviewAI Pro - Master Your Interview Skills",
-  description: "Elevate your career with AI-powered interview coaching. Real-time feedback, personalized practice sessions, and expert guidance to ace any interview.",
+  description:
+    "Elevate your career with AI-powered interview coaching. Real-time feedback, personalized practice sessions, and expert guidance to ace any interview.",
 };
 
 export default function RootLayout({

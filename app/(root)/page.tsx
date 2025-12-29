@@ -30,7 +30,8 @@ async function Home() {
               Master Every Interview with AI
             </h1>
             <p className="text-xl text-light-200 leading-relaxed">
-              Practice with our advanced AI interviewer. Get instant, actionable feedback and perfect your responses before the real thing.
+              Practice with our advanced AI interviewer. Get instant, actionable
+              feedback and perfect your responses before the real thing.
             </p>
           </div>
 
@@ -49,7 +50,9 @@ async function Home() {
       </section>
 
       <section className="flex flex-col gap-8 mt-12">
-        <h2 className="text-3xl font-bold tracking-tight">Your Practice Sessions</h2>
+        <h2 className="text-3xl font-bold tracking-tight">
+          Your Practice Sessions
+        </h2>
 
         <div className="interviews-section">
           {hasPastInterviews ? (
@@ -66,14 +69,19 @@ async function Home() {
             ))
           ) : (
             <div className="text-center py-12 px-6 rounded-2xl bg-dark-200/50 border border-dark-400/30">
-              <p className="text-light-200 text-lg">Start your journey to interview mastery. Take your first practice session now!</p>
+              <p className="text-light-200 text-lg">
+                Start your journey to interview mastery. Take your first
+                practice session now!
+              </p>
             </div>
           )}
         </div>
       </section>
 
       <section className="flex flex-col gap-8 mt-12">
-        <h2 className="text-3xl font-bold tracking-tight">Available Practice Interviews</h2>
+        <h2 className="text-3xl font-bold tracking-tight">
+          Available Practice Interviews
+        </h2>
 
         <div className="interviews-section">
           {hasUpcomingInterviews ? (

@@ -38,7 +38,9 @@ const InterviewDetails = async ({ params }: RouteParams) => {
                 className="rounded-full object-cover size-[50px]"
               />
             </div>
-            <h3 className="capitalize text-2xl font-bold">{interview.role} Interview</h3>
+            <h3 className="capitalize text-2xl font-bold">
+              {interview.role} Interview
+            </h3>
           </div>
 
           <DisplayTechIcons techStack={interview.techstack} />

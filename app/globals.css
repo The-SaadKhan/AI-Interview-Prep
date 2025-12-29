@@ -144,24 +144,31 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground antialiased;
   }
+
   p {
     @apply text-light-200 leading-relaxed;
   }
+
   h1 {
     @apply text-5xl font-bold tracking-tight;
   }
+
   h2 {
     @apply text-4xl font-bold tracking-tight;
   }
+
   h3 {
     @apply text-2xl font-semibold tracking-tight;
   }
+
   ul {
     @apply list-disc list-inside;
   }
+
   li {
     @apply text-light-100;
   }
@@ -169,7 +176,7 @@
 
 @layer components {
   .btn-call {
-    @apply inline-block px-7 py-3 font-bold text-sm leading-5 text-white transition-colors duration-150 bg-success-100 border border-transparent rounded-full shadow-sm focus:outline-none focus:shadow-2xl active:bg-success-200 hover:bg-success-200 min-w-28 cursor-pointer items-center justify-center overflow-visible;
+    @apply inline-block px-7 py-3 font-bold text-sm leading-5 text-white transition-colors duration-150 bg-success-100 border border-transparent rounded-full shadow-sm focus: outline-none focus:shadow-2xl active:bg-success-200 hover:bg-success-200 min-w-28 cursor-pointer items-center justify-center overflow-visible;
 
     .span {
       @apply bg-success-100 h-[85%] w-[65%];
@@ -177,21 +184,23 @@
   }
 
   .btn-disconnect {
-    @apply inline-block px-7 py-3 text-sm font-bold leading-5 text-white transition-colors duration-150 bg-destructive-100 border border-transparent rounded-full shadow-sm focus:outline-none focus:shadow-2xl active:bg-destructive-200 hover:bg-destructive-200 min-w-28;
+    @apply inline-block px-7 py-3 text-sm font-bold leading-5 text-white transition-colors duration-150 bg-destructive-100 border border-transparent rounded-full shadow-sm focus: outline-none focus:shadow-2xl active:bg-destructive-200 hover:bg-destructive-200 min-w-28;
   }
 
   .btn-upload {
     @apply flex min-h-14 w-full items-center justify-center gap-1.5 rounded-md;
   }
+
   .btn-primary {
-    @apply w-fit !bg-gradient-to-r !from-primary-200 !to-primary-300 !text-white hover:!from-primary-300 hover:!to-primary-200 !rounded-full !font-semibold px-8 py-3 cursor-pointer min-h-11 shadow-lg shadow-primary-200/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-200/40 hover:scale-105;
+    @apply w-fit !bg-gradient-to-r !from-primary-200 !to-primary-300 !text-white hover:  !from-primary-300 hover: !to-primary-200 !rounded-full !font-semibold px-8 py-3 cursor-pointer min-h-11 shadow-lg shadow-primary-200/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-200/40 hover:scale-105;
   }
+
   .btn-secondary {
-    @apply w-fit !bg-dark-200 !text-light-100 hover:!bg-dark-300 !rounded-full !font-semibold px-8 py-3 cursor-pointer min-h-11 border border-dark-400/50 transition-all duration-300 hover:border-primary-200/50;
+    @apply w-fit !bg-dark-200 !text-light-100 hover:  !bg-dark-300 !rounded-full !font-semibold px-8 py-3 cursor-pointer min-h-11 border border-dark-400/50 transition-all duration-300 hover:border-primary-200/50;
   }
 
   .btn-upload {
-    @apply bg-dark-200 rounded-full min-h-12 px-5 cursor-pointer border border-input  overflow-hidden;
+    @apply bg-dark-200 rounded-full min-h-12 px-5 cursor-pointer border border-input overflow-hidden;
   }
 
   .card-border {
@@ -206,27 +215,27 @@
     @apply w-full;
 
     .label {
-      @apply !text-light-200 !font-medium !text-sm;
+      @apply  !text-light-200 !font-medium !text-sm;
     }
 
     .input {
-      @apply !bg-dark-200/80 !backdrop-blur-sm !rounded-xl !min-h-12 !px-5 placeholder:!text-light-400 !border !border-dark-400/30 focus:!border-primary-200/50 !transition-all !duration-300;
+      @apply  !bg-dark-200/80 !backdrop-blur-sm !rounded-xl !min-h-12 !px-5 placeholder:  !text-light-400 !border !border-dark-400/30 focus: !border-primary-200/50 !transition-all !duration-300;
     }
 
     .btn {
-      @apply !w-full !bg-gradient-to-r !from-primary-200 !to-primary-300 !text-white hover:!from-primary-300 hover:!to-primary-200 !rounded-xl !min-h-12 !font-semibold !px-5 cursor-pointer !shadow-lg !shadow-primary-200/30 hover:!shadow-xl hover:!shadow-primary-200/40 !transition-all !duration-300;
+      @apply  !w-full !bg-gradient-to-r !from-primary-200 !to-primary-300 !text-white hover:  !from-primary-300 hover: !to-primary-200 !rounded-xl !min-h-12 !font-semibold !px-5 cursor-pointer !shadow-lg !shadow-primary-200/30 hover: !shadow-xl hover: !shadow-primary-200/40 !transition-all !duration-300;
     }
   }
 
   .call-view {
-    @apply flex sm:flex-row flex-col gap-10 items-center justify-between w-full mt-8;
+    @apply flex sm: flex-row flex-col gap-10 items-center justify-between w-full mt-8;
 
     h3 {
       @apply text-center text-white mt-5 text-2xl font-bold;
     }
 
     .card-interviewer {
-      @apply flex-center flex-col gap-4 p-8 h-[420px] bg-gradient-to-br from-primary-200/15 via-accent-100/10 to-primary-300/15 rounded-2xl border-2 border-primary-200/30 flex-1 sm:basis-1/2 w-full shadow-2xl backdrop-blur-sm;
+      @apply flex-center flex-col gap-4 p-8 h-[420px] bg-gradient-to-br from-primary-200/15 via-accent-100/10 to-primary-300/15 rounded-2xl border-2 border-primary-200/30 flex-1 sm: basis-1/2 w-full shadow-2xl backdrop-blur-sm;
     }
 
     .avatar {
@@ -238,7 +247,7 @@
     }
 
     .card-border {
-      @apply p-[2px] rounded-2xl flex-1 sm:basis-1/2 w-full h-[420px] max-md:hidden bg-gradient-to-br from-primary-200/60 via-accent-100/40 to-primary-300/60 shadow-xl;
+      @apply p-[2px] rounded-2xl flex-1 sm: basis-1/2 w-full h-[420px] max-md:hidden bg-gradient-to-br from-primary-200/60 via-accent-100/40 to-primary-300/60 shadow-xl;
     }
 
     .card-content {
@@ -259,27 +268,27 @@
   }
 
   .section-feedback {
-    @apply flex flex-col gap-10 max-w-5xl mx-auto max-sm:px-4 text-lg leading-7 py-8;
+    @apply flex flex-col gap-10 max-w-5xl mx-auto max-sm: px-4 text-lg leading-7 py-8;
 
     .buttons {
-      @apply flex w-full justify-center gap-6 max-sm:flex-col max-sm:items-stretch mt-4;
+      @apply flex w-full justify-center gap-6 max-sm: flex-col max-sm:items-stretch mt-4;
     }
   }
 
   .auth-layout {
-    @apply flex items-center justify-center mx-auto max-w-7xl min-h-screen max-sm:px-4 max-sm:py-8 bg-gradient-to-br from-primary-200/5 via-transparent to-accent-100/5;
+    @apply flex items-center justify-center mx-auto max-w-7xl min-h-screen max-sm: px-4 max-sm:py-8 bg-gradient-to-br from-primary-200/5 via-transparent to-accent-100/5;
   }
 
   .root-layout {
-    @apply flex mx-auto max-w-7xl flex-col gap-12 my-12 px-16 max-sm:px-4 max-sm:my-8;
+    @apply flex mx-auto max-w-7xl flex-col gap-12 my-12 px-16 max-sm: px-4 max-sm:my-8;
   }
 
   .card-cta {
-    @apply flex flex-row bg-gradient-to-br from-primary-200/10 via-accent-100/5 to-primary-300/10 rounded-3xl px-16 py-12 items-center justify-between max-sm:px-6 max-sm:py-8 border border-primary-200/20 shadow-2xl backdrop-blur-sm;
+    @apply flex flex-row bg-gradient-to-br from-primary-200/10 via-accent-100/5 to-primary-300/10 rounded-3xl px-16 py-12 items-center justify-between max-sm: px-6 max-sm:py-8 border border-primary-200/20 shadow-2xl backdrop-blur-sm;
   }
 
   .interviews-section {
-    @apply flex flex-wrap gap-4 max-lg:flex-col w-full items-stretch;
+    @apply flex flex-wrap gap-4 max-lg: flex-col w-full items-stretch;
   }
 
   .interview-text {
@@ -291,11 +300,11 @@
   }
 
   .tech-tooltip {
-    @apply absolute bottom-full mb-1 hidden group-hover:flex px-2 py-1 text-xs text-white bg-gray-700 rounded-md shadow-md;
+    @apply absolute bottom-full mb-1 hidden group-hover: flex px-2 py-1 text-xs text-white bg-gray-700 rounded-md shadow-md;
   }
 
   .card-interview {
-    @apply bg-gradient-to-br from-dark-200/95 via-dark-200 to-dark-300/90 rounded-2xl min-h-full flex flex-col p-7 relative overflow-hidden gap-10 justify-between backdrop-blur-sm hover:shadow-2xl hover:shadow-primary-200/10 transition-all duration-300 hover:scale-[1.02];
+    @apply bg-gradient-to-br from-dark-200/95 via-dark-200 to-dark-300/90 rounded-2xl min-h-full flex flex-col p-7 relative overflow-hidden gap-10 justify-between backdrop-blur-sm hover: shadow-2xl hover:shadow-primary-200/10 transition-all duration-300 hover:scale-[1.02];
 
     .badge-text {
       @apply text-sm font-semibold capitalize text-white;
@@ -344,6 +353,7 @@
     opacity: 0;
     transform: translateY(5px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

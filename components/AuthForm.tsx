@@ -103,14 +103,24 @@ const AuthForm = ({ type }: { type: FormType }) => {
         <div className="flex flex-col gap-3 items-center">
           <div className="flex flex-row gap-2 items-center">
             <Image src="/logo.svg" alt="logo" height={38} width={44} />
-            <h2 className="text-primary-200 font-bold tracking-tight">InterviewAI Pro</h2>
+            <h2 className="text-primary-200 font-bold tracking-tight">
+              InterviewAI Pro
+            </h2>
           </div>
-          <p className="text-light-400 text-center text-sm">Master your interviews with AI-powered coaching</p>
+          <p className="text-light-400 text-center text-sm">
+            Master your interviews with AI-powered coaching
+          </p>
         </div>
 
         <div className="flex flex-col gap-2 text-center">
-          <h3 className="text-2xl font-bold">{isSignIn ? "Welcome Back" : "Create Your Account"}</h3>
-          <p className="text-light-400 text-sm">{isSignIn ? "Continue your interview preparation journey" : "Start practicing with AI today"}</p>
+          <h3 className="text-2xl font-bold">
+            {isSignIn ? "Welcome Back" : "Create Your Account"}
+          </h3>
+          <p className="text-light-400 text-sm">
+            {isSignIn
+              ? "Continue your interview preparation journey"
+              : "Start practicing with AI today"}
+          </p>
         </div>
 
         <Form {...form}>
