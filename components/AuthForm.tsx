@@ -98,14 +98,20 @@ const AuthForm = ({ type }: { type: FormType }) => {
   const isSignIn = type === "sign-in";
 
   return (
-    <div className="card-border lg:min-w-[566px]">
-      <div className="flex flex-col gap-6 card py-14 px-10">
-        <div className="flex flex-row gap-2 justify-center">
-          <Image src="/logo.svg" alt="logo" height={32} width={38} />
-          <h2 className="text-primary-100">PrepWise</h2>
+    <div className="card-border lg:min-w-[600px]">
+      <div className="flex flex-col gap-8 card py-16 px-12">
+        <div className="flex flex-col gap-3 items-center">
+          <div className="flex flex-row gap-2 items-center">
+            <Image src="/logo.svg" alt="logo" height={38} width={44} />
+            <h2 className="text-primary-200 font-bold tracking-tight">InterviewAI Pro</h2>
+          </div>
+          <p className="text-light-400 text-center text-sm">Master your interviews with AI-powered coaching</p>
         </div>
 
-        <h3>Practice job interviews with AI</h3>
+        <div className="flex flex-col gap-2 text-center">
+          <h3 className="text-2xl font-bold">{isSignIn ? "Welcome Back" : "Create Your Account"}</h3>
+          <p className="text-light-400 text-sm">{isSignIn ? "Continue your interview preparation journey" : "Start practicing with AI today"}</p>
+        </div>
 
         <Form {...form}>
           <form
@@ -144,11 +150,11 @@ const AuthForm = ({ type }: { type: FormType }) => {
           </form>
         </Form>
 
-        <p className="text-center">
+        <p className="text-center text-light-400">
           {isSignIn ? "No account yet?" : "Have an account already?"}
           <Link
             href={!isSignIn ? "/sign-in" : "/sign-up"}
-            className="font-bold text-user-primary ml-1"
+            className="font-semibold text-primary-200 hover:text-primary-100 ml-1 transition-colors"
           >
             {!isSignIn ? "Sign In" : "Sign Up"}
           </Link>

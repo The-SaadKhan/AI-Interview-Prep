@@ -133,11 +133,12 @@ const Agent = ({userName,userId,type,interviewId, questions} : AgentProps) => {
                 <Image src="/ai-avatar.png" alt= "vapi" width={65} height={54} className='object-cover'/>
                 {isSpeaking && <span className='animate-speak'></span>}
             </div>
-            <h3>AI Interviewer</h3>
+            <h3>Your AI Coach</h3>
+            <p className="text-sm text-light-400">Ready to help you practice</p>
         </div>
         <div className='card-border'>
             <div className='card-content'>
-                <Image src="/user-avatar.png" alt='user avatar' width={540} height={540} className='rounded-full object-cover size-[120px]'/>
+                {/* <Image src="/user-avatar.png" alt='user avatar' width={540} height={540} className='rounded-full object-cover size-[120px]'/> */}
                 <h3>{userName}</h3>
             </div>
         </div>
@@ -153,17 +154,17 @@ const Agent = ({userName,userId,type,interviewId, questions} : AgentProps) => {
     )}
     <div className='w-full flex justify-center'>
         {callStatus !== 'ACTIVE' ? (
-            <button className='relative btn-call' onClick={handleCall}>
+            <button className='relative btn-call shadow-lg shadow-success-100/30 hover:shadow-xl hover:shadow-success-100/40 transition-all duration-300' onClick={handleCall}>
                 <span className={cn('absolute animate-ping rounded-full opacity-75', callStatus !== 'CONNECTING' && 'hidden')}/>
                     
-                    <span>
-                    {isCallInactiveOrFinished ? 'Call' : '. . .'}
+                    <span className='font-semibold'>
+                    {isCallInactiveOrFinished ? 'Start Session' : 'Connecting...'}
                     </span>
                 
             </button>
         ):(
-            <button className='btn-disconnect' onClick={handleDisconnect}>
-                End
+            <button className='btn-disconnect shadow-lg shadow-destructive-100/30 hover:shadow-xl hover:shadow-destructive-100/40 transition-all duration-300 font-semibold' onClick={handleDisconnect}>
+                End Session
             </button>
         )}
     </div>
