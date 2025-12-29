@@ -5,28 +5,22 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-success-100: #10b981;
-  --color-success-200: #059669;
-  --color-destructive-100: #ef4444;
-  --color-destructive-200: #dc2626;
+  --color-success-100: #49de50;
+  --color-success-200: #42c748;
+  --color-destructive-100: #f75353;
+  --color-destructive-200: #c44141;
 
-  --color-primary-100: #a78bfa;
-  --color-primary-200: #8b5cf6;
-  --color-primary-300: #7c3aed;
+  --color-primary-100: #dddfff;
+  --color-primary-200: #cac5fe;
 
-  --color-accent-100: #06b6d4;
-  --color-accent-200: #0891b2;
+  --color-light-100: #d6e0ff;
+  --color-light-400: #6870a6;
+  --color-light-600: #4f557d;
+  --color-light-800: #24273a;
 
-  --color-light-100: #e0e7ff;
-  --color-light-200: #c7d2fe;
-  --color-light-400: #818cf8;
-  --color-light-600: #6366f1;
-  --color-light-800: #4f46e5;
-
-  --color-dark-100: #0f172a;
-  --color-dark-200: #1e293b;
-  --color-dark-300: #334155;
-  --color-dark-400: #475569;
+  --color-dark-100: #020408;
+  --color-dark-200: #27282f;
+  --color-dark-300: #242633;
 
   --font-mona-sans: "Mona Sans", sans-serif;
 
@@ -69,24 +63,24 @@
 }
 
 .dark {
-  --background: oklch(0.11 0.01 265);
+  --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.16 0.015 265);
+  --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.16 0.015 265);
+  --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.7 0.2 270);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.25 0.02 265);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.25 0.02 265);
-  --muted-foreground: var(--light-200);
-  --accent: oklch(0.65 0.18 195);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: var(--light-100);
+  --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 8%);
-  --ring: oklch(0.7 0.2 270);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -146,29 +140,20 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground;
   }
-
   p {
-    @apply text-light-200 leading-relaxed;
+    @apply text-light-100;
   }
-
-  h1 {
-    @apply text-5xl font-bold tracking-tight;
-  }
-
   h2 {
-    @apply text-4xl font-bold tracking-tight;
+    @apply text-3xl font-semibold;
   }
-
   h3 {
-    @apply text-2xl font-semibold tracking-tight;
+    @apply text-2xl font-semibold;
   }
-
   ul {
     @apply list-disc list-inside;
   }
-
   li {
     @apply text-light-100;
   }
@@ -192,11 +177,10 @@
   }
 
   .btn-primary {
-    @apply w-fit !bg-gradient-to-r !from-primary-200 !to-primary-300 !text-white hover:  !from-primary-300 hover: !to-primary-200 !rounded-full !font-semibold px-8 py-3 cursor-pointer min-h-11 shadow-lg shadow-primary-200/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-200/40 hover:scale-105;
+    @apply w-fit !bg-primary-200 !text-dark-100 hover:!bg-primary-200/80 !rounded-full !font-bold px-5 cursor-pointer min-h-10;
   }
-
   .btn-secondary {
-    @apply w-fit !bg-dark-200 !text-light-100 hover:  !bg-dark-300 !rounded-full !font-semibold px-8 py-3 cursor-pointer min-h-11 border border-dark-400/50 transition-all duration-300 hover:border-primary-200/50;
+    @apply w-fit !bg-dark-200 !text-primary-200 hover:!bg-dark-200/80 !rounded-full !font-bold px-5 cursor-pointer min-h-10;
   }
 
   .btn-upload {
@@ -204,79 +188,79 @@
   }
 
   .card-border {
-    @apply p-[2px] rounded-2xl w-fit bg-gradient-to-br from-primary-200/60 via-accent-100/40 to-primary-300/60 shadow-xl;
+    @apply border-gradient p-0.5 rounded-2xl w-fit;
   }
 
   .card {
-    @apply bg-gradient-to-br from-dark-200/95 via-dark-200 to-dark-300/95 rounded-2xl min-h-full backdrop-blur-sm;
+    @apply dark-gradient rounded-2xl min-h-full;
   }
 
   .form {
     @apply w-full;
 
     .label {
-      @apply  !text-light-200 !font-medium !text-sm;
+      @apply !text-light-100 !font-normal;
     }
 
     .input {
-      @apply  !bg-dark-200/80 !backdrop-blur-sm !rounded-xl !min-h-12 !px-5 placeholder:  !text-light-400 !border !border-dark-400/30 focus: !border-primary-200/50 !transition-all !duration-300;
+      @apply !bg-dark-200 !rounded-full !min-h-12 !px-5 placeholder:!text-light-100;
     }
 
     .btn {
-      @apply  !w-full !bg-gradient-to-r !from-primary-200 !to-primary-300 !text-white hover:  !from-primary-300 hover: !to-primary-200 !rounded-xl !min-h-12 !font-semibold !px-5 cursor-pointer !shadow-lg !shadow-primary-200/30 hover: !shadow-xl hover: !shadow-primary-200/40 !transition-all !duration-300;
+      @apply !w-full !bg-primary-200 !text-dark-100 hover:!bg-primary-200/80 !rounded-full !min-h-10 !font-bold !px-5 cursor-pointer;
     }
   }
 
   .call-view {
-    @apply flex sm: flex-row flex-col gap-10 items-center justify-between w-full mt-8;
+    @apply flex sm:flex-row flex-col gap-10 items-center justify-between w-full;
 
     h3 {
-      @apply text-center text-white mt-5 text-2xl font-bold;
+      @apply text-center text-primary-100 mt-5;
     }
 
     .card-interviewer {
-      @apply flex-center flex-col gap-4 p-8 h-[420px] bg-gradient-to-br from-primary-200/15 via-accent-100/10 to-primary-300/15 rounded-2xl border-2 border-primary-200/30 flex-1 sm: basis-1/2 w-full shadow-2xl backdrop-blur-sm;
+      @apply flex-center flex-col gap-2 p-7 h-[400px] blue-gradient-dark rounded-lg border-2 border-primary-200/50 flex-1 sm:basis-1/2 w-full;
     }
 
     .avatar {
-      @apply z-10 flex items-center justify-center bg-gradient-to-r from-primary-100 via-primary-200 to-accent-100 rounded-full size-[140px] relative shadow-2xl shadow-primary-200/50;
+      @apply z-10 flex items-center justify-center blue-gradient rounded-full size-[120px] relative;
 
       .animate-speak {
-        @apply absolute inline-flex size-5/6 animate-ping rounded-full bg-accent-100 opacity-60;
+        @apply absolute inline-flex size-5/6 animate-ping rounded-full bg-primary-200 opacity-75;
       }
     }
 
     .card-border {
-      @apply p-[2px] rounded-2xl flex-1 sm: basis-1/2 w-full h-[420px] max-md:hidden bg-gradient-to-br from-primary-200/60 via-accent-100/40 to-primary-300/60 shadow-xl;
+      @apply border-gradient p-0.5 rounded-2xl flex-1 sm:basis-1/2 w-full h-[400px] max-md:hidden;
     }
 
     .card-content {
-      @apply flex flex-col gap-4 justify-center items-center p-8 bg-gradient-to-br from-dark-200/95 via-dark-200 to-dark-300/90 rounded-2xl min-h-full backdrop-blur-sm;
+      @apply flex flex-col gap-2 justify-center items-center p-7 dark-gradient rounded-2xl min-h-full;
     }
   }
 
   .transcript-border {
-    @apply p-[2px] rounded-2xl w-full bg-gradient-to-br from-primary-200/60 via-accent-100/40 to-primary-300/60 shadow-xl mt-8;
+    @apply border-gradient p-0.5 rounded-2xl w-full;
 
     .transcript {
-      @apply bg-gradient-to-br from-dark-200/95 via-dark-200 to-dark-300/90 rounded-2xl min-h-16 px-6 py-4 flex items-center justify-center backdrop-blur-sm;
+      @apply dark-gradient rounded-2xl  min-h-12 px-5 py-3 flex items-center justify-center;
 
       p {
-        @apply text-lg text-center text-white font-medium leading-relaxed;
+        @apply text-lg text-center text-white;
       }
     }
   }
 
   .section-feedback {
-    @apply flex flex-col gap-10 max-w-5xl mx-auto max-sm: px-4 text-lg leading-7 py-8;
+    @apply flex flex-col gap-8 max-w-5xl mx-auto max-sm:px-4 text-lg leading-7;
 
     .buttons {
-      @apply flex w-full justify-center gap-6 max-sm: flex-col max-sm:items-stretch mt-4;
+      @apply flex w-full justify-evenly gap-4 max-sm:flex-col max-sm:items-center;
     }
   }
 
   .auth-layout {
-    @apply flex items-center justify-center mx-auto max-w-7xl min-h-screen max-sm: px-4 max-sm:py-8 bg-gradient-to-br from-primary-200/5 via-transparent to-accent-100/5;
+    @apply flex items-center justify-center mx-auto max-w-7xl min-h-screen max-sm:px-4 max-sm:py-8;
   }
 
   .root-layout {
@@ -284,7 +268,7 @@
   }
 
   .card-cta {
-    @apply flex flex-row bg-gradient-to-br from-primary-200/10 via-accent-100/5 to-primary-300/10 rounded-3xl px-16 py-12 items-center justify-between max-sm: px-6 max-sm:py-8 border border-primary-200/20 shadow-2xl backdrop-blur-sm;
+    @apply flex flex-row blue-gradient-dark rounded-3xl px-16 py-6 items-center justify-between max-sm:px-4;
   }
 
   .interviews-section {
@@ -304,20 +288,20 @@
   }
 
   .card-interview {
-    @apply bg-gradient-to-br from-dark-200/95 via-dark-200 to-dark-300/90 rounded-2xl min-h-full flex flex-col p-7 relative overflow-hidden gap-10 justify-between backdrop-blur-sm hover: shadow-2xl hover:shadow-primary-200/10 transition-all duration-300 hover:scale-[1.02];
+    @apply dark-gradient rounded-2xl min-h-full flex flex-col p-6 relative overflow-hidden gap-10 justify-between;
 
     .badge-text {
-      @apply text-sm font-semibold capitalize text-white;
+      @apply text-sm font-semibold capitalize;
     }
   }
 }
 
 @utility dark-gradient {
-  @apply bg-gradient-to-br from-dark-200/95 via-dark-200 to-dark-300/90;
+  @apply bg-gradient-to-b from-[#1A1C20] to-[#08090D];
 }
 
 @utility border-gradient {
-  @apply bg-gradient-to-br from-primary-200/60 via-accent-100/40 to-primary-300/60;
+  @apply bg-gradient-to-b from-[#4B4D4F] to-[#4B4D4F33];
 }
 
 @utility pattern {
@@ -325,19 +309,11 @@
 }
 
 @utility blue-gradient-dark {
-  @apply bg-gradient-to-br from-primary-200/10 via-accent-100/5 to-primary-300/10;
+  @apply bg-gradient-to-b from-[#171532] to-[#08090D];
 }
 
 @utility blue-gradient {
-  @apply bg-gradient-to-r from-primary-100 via-primary-200 to-accent-100;
-}
-
-@utility premium-gradient {
-  @apply bg-gradient-to-br from-primary-200/20 via-transparent to-accent-100/20;
-}
-
-@utility glass-effect {
-  @apply backdrop-blur-md bg-white/5 border border-white/10;
+  @apply bg-gradient-to-l from-[#FFFFFF] to-[#CAC5FE];
 }
 
 @utility flex-center {

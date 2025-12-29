@@ -142,8 +142,7 @@ const Agent = ({
             />
             {isSpeaking && <span className="animate-speak"></span>}
           </div>
-          <h3>Your AI Coach</h3>
-          <p className="text-sm text-light-400">Ready to help you practice</p>
+          <h3>AI Interviewer</h3>
         </div>
         <div className="card-border">
           <div className="card-content">
@@ -169,10 +168,7 @@ const Agent = ({
       )}
       <div className="w-full flex justify-center">
         {callStatus !== "ACTIVE" ? (
-          <button
-            className="relative btn-call shadow-lg shadow-success-100/30 hover:shadow-xl hover:shadow-success-100/40 transition-all duration-300"
-            onClick={handleCall}
-          >
+          <button className="relative btn-call" onClick={handleCall}>
             <span
               className={cn(
                 "absolute animate-ping rounded-full opacity-75",
@@ -180,16 +176,11 @@ const Agent = ({
               )}
             />
 
-            <span className="font-semibold">
-              {isCallInactiveOrFinished ? "Start Session" : "Connecting..."}
-            </span>
+            <span>{isCallInactiveOrFinished ? "Call" : ". . ."}</span>
           </button>
         ) : (
-          <button
-            className="btn-disconnect shadow-lg shadow-destructive-100/30 hover:shadow-xl hover:shadow-destructive-100/40 transition-all duration-300 font-semibold"
-            onClick={handleDisconnect}
-          >
-            End Session
+          <button className="btn-disconnect" onClick={handleDisconnect}>
+            End
           </button>
         )}
       </div>

@@ -26,29 +26,25 @@ const InterviewDetails = async ({ params }: RouteParams) => {
 
   return (
     <>
-      <div className="flex flex-row gap-6 justify-between items-center max-sm:flex-col max-sm:items-start">
-        <div className="flex flex-row gap-6 items-center max-sm:flex-col max-sm:items-start max-sm:gap-4">
+      <div className="flex flex-row gap-4 justify-between">
+        <div className="flex flex-row gap-4 items-center max-sm:flex-col">
           <div className="flex flex-row gap-4 items-center">
-            <div className="p-1 rounded-full bg-gradient-to-br from-primary-200/60 via-accent-100/40 to-primary-300/60">
-              <Image
-                src={getRandomInterviewCover()}
-                alt="cover-image"
-                width={50}
-                height={50}
-                className="rounded-full object-cover size-[50px]"
-              />
-            </div>
-            <h3 className="capitalize text-2xl font-bold">
-              {interview.role} Interview
-            </h3>
+            <Image
+              src={getRandomInterviewCover()}
+              alt="cover-image"
+              width={40}
+              height={40}
+              className="rounded-full object-cover size-[40px]"
+            />
+            <h3 className="capitalize">{interview.role} Interview</h3>
           </div>
 
           <DisplayTechIcons techStack={interview.techstack} />
         </div>
 
-        <div className="bg-gradient-to-r from-primary-200/20 to-primary-300/20 px-6 py-2.5 rounded-xl border border-primary-200/30 backdrop-blur-sm">
-          <p className="font-semibold text-primary-100">{interview.type}</p>
-        </div>
+        <p className="bg-dark-200 px-4 py-2 rounded-lg h-fit">
+          {interview.type}
+        </p>
       </div>
 
       <Agent

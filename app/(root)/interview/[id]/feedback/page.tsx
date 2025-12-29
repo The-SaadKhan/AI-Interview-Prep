@@ -24,36 +24,31 @@ const Feedback = async ({ params }: RouteParams) => {
 
   return (
     <section className="section-feedback">
-      <div className="flex flex-col items-center gap-3 text-center">
-        <h1 className="text-5xl font-bold tracking-tight">
-          Interview Feedback
+      <div className="flex flex-row justify-center">
+        <h1 className="text-4xl font-semibold">
+          Feedback on the Interview -{" "}
+          <span className="capitalize">{interview.role}</span> Interview
         </h1>
-        <p className="text-xl text-light-400">
-          <span className="capitalize text-primary-200 font-semibold">
-            {interview.role}
-          </span>{" "}
-          Interview Performance Analysis
-        </p>
       </div>
 
-      <div className="flex flex-row justify-center">
-        <div className="flex flex-row gap-8 max-sm:flex-col max-sm:gap-4">
+      <div className="flex flex-row justify-center ">
+        <div className="flex flex-row gap-5">
           {/* Overall Impression */}
-          <div className="flex flex-row gap-3 items-center px-6 py-3 rounded-xl bg-gradient-to-r from-primary-200/10 to-accent-100/10 border border-primary-200/20">
-            <Image src="/star.svg" width={24} height={24} alt="star" />
-            <p className="font-medium">
-              Overall Score:{" "}
-              <span className="text-primary-200 font-bold text-xl">
+          <div className="flex flex-row gap-2 items-center">
+            <Image src="/star.svg" width={22} height={22} alt="star" />
+            <p>
+              Overall Impression:{" "}
+              <span className="text-primary-200 font-bold">
                 {feedback?.totalScore}
               </span>
-              <span className="text-light-400">/100</span>
+              /100
             </p>
           </div>
 
           {/* Date */}
-          <div className="flex flex-row gap-3 items-center px-6 py-3 rounded-xl bg-dark-200/50 border border-dark-400/30">
-            <Image src="/calendar.svg" width={24} height={24} alt="calendar" />
-            <p className="font-medium text-light-200">
+          <div className="flex flex-row gap-2">
+            <Image src="/calendar.svg" width={22} height={22} alt="calendar" />
+            <p>
               {feedback?.createdAt
                 ? dayjs(feedback.createdAt).format("MMM D, YYYY h:mm A")
                 : "N/A"}
@@ -62,65 +57,37 @@ const Feedback = async ({ params }: RouteParams) => {
         </div>
       </div>
 
-      <hr className="border-dark-400/30" />
+      <hr />
 
-      <div className="p-6 rounded-2xl bg-gradient-to-br from-dark-200/50 to-dark-300/50 border border-dark-400/30">
-        <p className="text-lg leading-relaxed">{feedback?.finalAssessment}</p>
-      </div>
+      <p>{feedback?.finalAssessment}</p>
 
       {/* Interview Breakdown */}
-      <div className="flex flex-col gap-6">
-        <h2 className="text-3xl font-bold tracking-tight">
-          Performance Breakdown
-        </h2>
-        <div className="grid gap-4">
-          {feedback?.categoryScores?.map((category, index) => (
-            <div
-              key={index}
-              className="p-6 rounded-xl bg-gradient-to-br from-dark-200/80 to-dark-300/80 border border-dark-400/30 hover:border-primary-200/30 transition-all duration-300"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-200/20 text-primary-200 font-bold">
-                  {index + 1}
-                </div>
-                <p className="font-bold text-xl">{category.name}</p>
-                <div className="ml-auto px-4 py-1.5 rounded-full bg-primary-200/20 border border-primary-200/30">
-                  <span className="text-primary-200 font-bold">
-                    {category.score}
-                  </span>
-                  <span className="text-light-400">/100</span>
-                </div>
-              </div>
-              <p className="text-light-200 leading-relaxed">
-                {category.comment}
-              </p>
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-col gap-4">
+        <h2>Breakdown of the Interview:</h2>
+        {feedback?.categoryScores?.map((category, index) => (
+          <div key={index}>
+            <p className="font-bold">
+              {index + 1}. {category.name} ({category.score}/100)
+            </p>
+            <p>{category.comment}</p>
+          </div>
+        ))}
       </div>
 
-      <div className="flex flex-col gap-4 p-6 rounded-2xl bg-gradient-to-br from-success-100/5 to-transparent border border-success-100/20">
-        <h3 className="text-2xl font-bold tracking-tight text-success-100">
-          ✓ Strengths
-        </h3>
-        <ul className="space-y-2">
+      <div className="flex flex-col gap-3">
+        <h3>Strengths</h3>
+        <ul>
           {feedback?.strengths?.map((strength, index) => (
-            <li key={index} className="text-light-200 leading-relaxed">
-              {strength}
-            </li>
+            <li key={index}>{strength}</li>
           ))}
         </ul>
       </div>
 
-      <div className="flex flex-col gap-4 p-6 rounded-2xl bg-gradient-to-br from-accent-100/5 to-transparent border border-accent-100/20">
-        <h3 className="text-2xl font-bold tracking-tight text-accent-100">
-          → Areas for Improvement
-        </h3>
-        <ul className="space-y-2">
+      <div className="flex flex-col gap-3">
+        <h3>Areas for Improvement</h3>
+        <ul>
           {feedback?.areasForImprovement?.map((area, index) => (
-            <li key={index} className="text-light-200 leading-relaxed">
-              {area}
-            </li>
+            <li key={index}>{area}</li>
           ))}
         </ul>
       </div>
@@ -128,7 +95,9 @@ const Feedback = async ({ params }: RouteParams) => {
       <div className="buttons">
         <Button className="btn-secondary flex-1">
           <Link href="/" className="flex w-full justify-center">
-            Back to Dashboard
+            <p className="text-sm font-semibold text-primary-200 text-center">
+              Back to dashboard
+            </p>
           </Link>
         </Button>
 
@@ -137,7 +106,9 @@ const Feedback = async ({ params }: RouteParams) => {
             href={`/interview/${id}`}
             className="flex w-full justify-center"
           >
-            Retake Interview
+            <p className="text-sm font-semibold text-black text-center">
+              Retake Interview
+            </p>
           </Link>
         </Button>
       </div>
