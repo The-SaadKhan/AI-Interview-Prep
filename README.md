@@ -1,9 +1,9 @@
-
 ## 🌐 Live Demo
 
 🚀 Check out the deployed project here: [AI-Interview-Prep Live](https://ai-interview-prep.vercel.app)
 
 ---
+
 ## 📋 <a name="table">Table of Contents</a>
 
 1. 🤖 [Introduction](#introduction)
@@ -13,7 +13,7 @@
 
 ## <a name="introduction">🤖 Introduction</a>
 
-Built with Next.js for the user interface and backend logic, Firebase for authentication and data storage, styled with TailwindCSS and using Vapi's voice agents, Prepwise is a website project designed to help you learn integrating AI models with your apps. The platform offers a sleek and modern experience for job interview preparation.
+Built with Next.js for the user interface and backend logic, Firebase for authentication and data storage, styled with TailwindCSS and using Vapi's voice agents, Interview.AI is a website project designed to help you learn integrating AI models with your apps. The platform offers a sleek and modern experience for job interview preparation.
 
 If you're getting started and need assistance or face any bugs, join our active Discord community with over **50k+** members. It's a place where people help each other out.
 
